@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Admin Login</title>
+</head>
+
+<body>
+    <section class="login-page">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 login-bg">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="login-box mt-4 ml-auto mr-auto" style="margin: auto;">
+                    <div id="show_alert">
+                        <blockquote class="alert-box alert-message ml-0 mr-0 mt-0 color-red" style="display: none;">
+                            "The Username field is required."
+                            <br>
+                        </blockquote>
+                    </div>
+                    <div class="login-logo">
+                        <a href="login.html"> <img src="images/logo3.png" alt="Admin Login"> </a>
+                        <h3 class="d-block mt-2 mb-0 font-weight-bold"> V5 Online Recharge System (Demo) </h3>
+                    </div>
+                    <div class="card">
+                        <div class="card-body login-card-body p-0">
+                            <form id="loginForm" action="admin.html" method="post" class="login-form p-3">
+                                <h5 class="text-center"> Customer ID: <span class="text-denger"> 131 </span> </h5>
+                                <h3 class="text-center form-title"> Admin Login </h3>
+                                <input type="hidden" id="csrf_token" name="mitload"
+                                    value="09e3badc249d74ca4fead534206b11de">
+                                <div class="form-group" style="margin: 15px 0;">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="    padding: 0.975rem 1.1rem"> <i
+                                                    class="fa-solid fa-user" style="font-weight: 900;"></i> </span>
+                                        </div>
+                                        <input type="text" name="username" id="username" placeholder="Username"
+                                            class="form-control boxx-shadow" autofocus>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="password_field" style="margin: 15px 0;">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="    padding: 0.975rem 1.1rem"> <i
+                                                    class="fa-solid fa-key" style="font-weight: 900;"></i> </span>
+                                        </div>
+                                        <input type="password" name="password" id="password" placeholder="Password"
+                                            class="form-control boxx-shadow" autofocus>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-0">
+                                    <div class="col-sm-12 text-center">
+                                        <a href="#" type="submit" id="btn-submit" class="btn btn-success"
+                                            style="margin-top: 15px;"> Login <i class="fa-solid fa-right-to-bracket"
+                                                style="font-weight: 900;"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-12 mt-3">
+                                        <table style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <th> Username </th>
+                                                    <th> Password </th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <td id="demo_user"> admin </td>
+                                                    <td id="demo_pass"> 12345678 </td>
+                                                    <td> <a href="javascript:void(0)" onclick="return copy_login_info()"
+                                                            class="btn btn-sm btn-info"> Copy </a> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="pending_btn_list list-inline">
+                                        <li class="nav-item desktop-btn"> <a href="#" class="nav-link"
+                                                title="Reseller new account request list"
+                                                style="padding: 0.3rem 0.3rem;"> <i class="fa-regular fa-user"></i>
+                                                <span class="mobile-text"> New
+                                                    Account Request </span>
+                                                <span class="badge badge-danger navbar-badge" style="font-size: .45em;
+                                                font-weight: 300;"> 9 </span>
+                                            </a> </li>
+                                        <li class="nav-item desktop-btn"> <a href="#" class="nav-link"
+                                                title="BD Recharge" style="padding: 0.3rem 0.3rem;"> <img
+                                                    src="images/bd-recharge.png" style="width: 25px;"> <span
+                                                    class="mobile-text"> BD Recharge </span>
+                                                <span class="badge badge-danger navbar-badge" style="font-size: .45em;
+                                                font-weight: 300;"> 8 </span> </a> </li>
+                                        <li class="nav-item desktop-btn"> <a href="#" class="nav-link" title="Bkash"
+                                                style="padding: 0.3rem 0.3rem;">
+                                                <img src="images/bkash1.png" style="width: 25px;"> <span
+                                                    class="mobile-text"> Bkash </span>
+                                                <span class="badge badge-danger navbar-badge" style="font-size: .45em;
+                                                font-weight: 300;"> 3 </span> </a> </li>
+                                        <li class="nav-item desktop-btn"> <a href="#" class="nav-link" title="Tap"
+                                                style="padding: 0.3rem 0.3rem;"> <img src="images/tap.png"
+                                                    style="width: 25px;"> <span class="mobile-text"> Tap </span>
+                                                <span class="badge badge-danger navbar-badge" style="font-size: .45em;
+                                                font-weight: 300;"> 2 </span> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="copyright-text" style="text-align: end;">
+        <div class="container">
+            <p style="margin: 0;
+            width: 95%;">
+                Page rendered in
+                <strong> 0.0122 </strong>
+                seconds. || Version 5.4.8
+                <br>
+                Copyright © 2014-2022 V5 Recharge. All rights reserved
+            </p>
+        </div>
+    </div>
+
+
+
+    <script src="js/theme-lib.js"></script>
+    <script src="js/theme-fun.js"></script>
+</body>
+
+</html>

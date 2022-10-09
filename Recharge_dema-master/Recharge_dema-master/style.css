@@ -1,0 +1,228 @@
+body {
+    display: block !important;
+    background-color: #6610f2;
+    font-family: "Lato", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.login-page {
+    background-color: #6610f2;
+    overflow-x: hidden;
+}
+
+.login-page .login-bg {
+    height: 100vh;
+    background-color: #007FC5;
+    background-image: url(images/login-bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.login-page .login-box {
+    width: 360px;
+}
+
+.login-page .login-box #show_alert {
+    position: absolute;
+    top: 35px;
+    width: 100%;
+}
+
+.login-page .login-box #show_alert .color-red,
+input.eror {
+    border-color: #DB0A0A;
+    color: #DB0A0A;
+}
+
+.login-page .login-box #show_alert .alert-box {
+    background-color: #f5f5f5;
+    border-left: 5px solid #ccc;
+    box-shadow: 1px 1px 3px #ccc;
+    font-size: 17px;
+    padding: 10px;
+    line-height: normal;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.login-page .login-box .login-logo,
+.register-logo {
+    font-size: 2.1rem;
+    font-weight: 300;
+    margin-bottom: 0.9rem;
+    text-align: center;
+    font-family: "Lato", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.login-page .login-box .login-logo a,
+.register-logo a {
+    color: #495057;
+}
+
+.login-page .login-box .login-logo a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.login-page .login-box .login-logo img {
+    width: 120px;
+}
+
+.login-page .login-box .login-logo h3 {
+    color: #fff;
+}
+
+.login-page .login-box .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    margin-bottom: 1rem;
+}
+
+.login-page .login-box .card .login-card-body,
+.register-card-body {
+    background: #ffffff;
+    border-top: 0;
+    color: #666;
+    padding: 20px;
+}
+
+.login-page .login-box .card .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    /* padding: 1.25rem; */
+}
+
+.login-page .login-box .card .login-form {
+    position: relative;
+}
+
+.login-page .login-box .card .login-form .text-center {
+    text-align: center !important;
+    font-weight: 400;
+}
+
+.login-page .login-box .card .login-form .text-denger {
+    color: #dc3545 !important;
+}
+
+.login-page .login-box .card .login-form .form-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #0192D6;
+}
+
+.login-page .login-box .card .login-form button,
+input {
+    overflow: visible;
+}
+
+.login-page .login-box .card .login-form input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.login-page .login-box .card .login-form .form-group .input-group {
+    position: relative;
+    /* display: -ms-flexbox; */
+    display: flex;
+    /* -ms-flex-wrap: wrap; */
+    flex-wrap: wrap;
+    /* -ms-flex-align: stretch; */
+    align-items: stretch;
+    width: 100%;
+}
+
+.login-page .login-box .card .login-form .form-group .boxx-shadow {
+    box-shadow: none;
+}
+
+.login-page .login-box .card .login-form .form-group .input-group .input-group-prepend {
+    margin-right: -1px;
+}
+
+.login-card-body .input-group .input-group-text,
+.register-card-body .input-group .input-group-text {
+    background-color: transparent;
+    color: #777;
+    transition: border-color 0.15s ease-in-out, 0.15s ease-in-out;
+}
+
+.login-page .login-box .card .login-form .form-group table {
+    border-collapse: collapse;
+}
+
+.login-page .login-box .card .login-form .pending_btn_list {
+    margin-top: 20px;
+}
+
+.login-page .login-box .card .login-form .list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.login-page .login-box .card .login-form .pending_btn_list li {
+    display: inline-block;
+    position: relative;
+    margin: 8px;
+    border: 1px solid #ccc;
+    line-height: 20px;
+}
+
+.login-box .nav-item a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.login-page .login-box .card .login-form .pending_btn_list span.mobile-text {
+    display: none;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    /* font-size: .45em;
+    font-weight: 300; */
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.badge-danger {
+    color: #ffffff;
+    background-color: #dc3545;
+}
+
+.navbar-badge {
+    font-size: .6rem;
+    font-weight: 300;
+    padding: 2px 4px;
+    position: absolute;
+    right: 5px;
+    top: 9px;
+}
+
+.pending_btn_list span.badge {
+    right: -3px;
+    top: -3px;
+}
+
+.copyright-text {
+    color: #fff;
+    background-color: #6610f2;
+}
